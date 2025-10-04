@@ -1,0 +1,1 @@
+print(float(input("What's the value of x= "))+float(input("What's the value of y=")))
