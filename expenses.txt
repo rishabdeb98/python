@@ -1,0 +1,3 @@
+5000,shopping
+20,dd
+40,food(maggi)
