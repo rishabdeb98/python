@@ -1,7 +1,10 @@
 from tkinter import *
-root=Tk()
-root.title("My second program")
+from PIL import Image, ImageTk
 
-r1=Label(root,text="Good Learning",bg="green",font="Arial 24 italic",fg="purple",width=15,height=2)
-r1.place(x=50,y=50)
-root.mainloop() 
+root = Tk()
+root.title("My second program")
+img = Image.open(r"C:\Users\Rishabh Deb\Documents\30-08-25_python\tkinter\ritvik.jpg")
+x1 = ImageTk.PhotoImage(img)
+r2 = Label(root, image=x1)
+r2.pack()
+root.mainloop()
