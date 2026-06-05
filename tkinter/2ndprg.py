@@ -1,10 +1,6 @@
 from tkinter import *
-from PIL import Image, ImageTk
 
-root = Tk()
-root.title("My second program")
-img = Image.open(r"C:\Users\Rishabh Deb\Documents\30-08-25_python\tkinter\ritvik.jpg")
-x1 = ImageTk.PhotoImage(img)
-r2 = Label(root, image=x1)
-r2.pack()
+root=Tk()
+b1=Button(root,text="Enter",bg="red",fg="blue",font="24",width="12",height="6")
+b1.grid(column="0",row="1")
 root.mainloop()
