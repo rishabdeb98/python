@@ -11,7 +11,7 @@ v=StringVar()
 def edtech():
     x=v.get()
     print(x)
-    l2.config(text=x)
+    l2.config(text=x,bg="blue",fg="aqua")
 
 e1=Entry(root,bd=5,font="Arial 20 bold",textvariable=v)
 e1.place(x=0,y=50)
