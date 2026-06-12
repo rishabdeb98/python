@@ -10,4 +10,7 @@ lb.pack()
 l1=["python","java","c++","ruby","javascript"]
 for i in l1:
     lb.insert(END,i)
+b1=Button(root,text="remove",bg="red",command=lambda:lb.delete(ANCHOR))
+b1.pack()
+
 root.mainloop()  
