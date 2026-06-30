@@ -4,16 +4,14 @@ root=Tk()
 root.title("Entry Widget")
 root.minsize(width=200,height=400)
 root.maxsize(width=400,height=600)
-v=IntVar()
+
+v=StringVar()
 def edtech():
-    print(v.get())
+    if v.get()=="":
+        messagebox.
 
-rb1=Radiobutton(root,text="Python",value=1,variable=v)
-rb1.pack()
-
-rb2=Radiobutton(root,text="Java",value=2,variable=v)
-rb2.pack()
-
-e1=Button(root,text="Submit",command=edtech)
+e1=Entry(root,bd=5,font=("calibri",20),width=20,textvariable=v)
 e1.pack()
+
+b1=Button(root,text="Submit",command=edtech)
 root.mainloop()  
