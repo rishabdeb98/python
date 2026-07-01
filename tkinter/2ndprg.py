@@ -1,17 +1,16 @@
 from tkinter import *
+victus=Tk()
 
-root=Tk()
-root.title("Entry Widget")
-root.minsize(width=200,height=400)
-root.maxsize(width=400,height=600)
+victus.geometry("400x400")
+f1=Frame()
+f1.pack()
 
-v=StringVar()
-def edtech():
-    if v.get()=="":
-        messagebox.
+f2=Frame()
+f2.pack(side=BOTTOM)
 
-e1=Entry(root,bd=5,font=("calibri",20),width=20,textvariable=v)
-e1.pack()
+l1=Label(f1,text="Great Learning")
+l1.pack()
 
-b1=Button(root,text="Submit",command=edtech)
-root.mainloop()  
+l2=Label(f2,text="Bottom")
+l2.pack()
+victus.mainloop()
