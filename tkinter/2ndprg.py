@@ -1,26 +1,20 @@
 from tkinter import *
 from tkinter import messagebox
-victus=Tk()
-victus.geometry("500x500")
-victus.title("Radio Button program")
+lens=Tk()
+lens.geometry("400x400")
 
-v=IntVar()
-rb=Radiobutton(victus,text="Python",value=1,variable=v)
-rb.pack(pady=20)
-
-rb2=Radiobutton(victus,text="Java",value=2,variable=v)
-rb2.pack(pady=20)
+v=StringVar()
 
 def edtech():
-    value = v.get()
-    if value == 0:
-        messagebox.showwarning("Caution", "Please select an option")
+    if v.get()=="":
+        messagebox.showwarning("Caution","Its empty")
     else:
-        selected_option = "Python" if value == 1 else "Java"
-        messagebox.showinfo("Successful", f"You selected: {selected_option}")
-        print(selected_option)
+        messagebox.showinfo("successfull",v.get())
 
-b1=Button(victus,text="submit",command=edtech)
-b1.pack(pady=20)
+e1=Entry(lens,text="Enter text",width=30,textvariable=v)
+e1.pack(pady=10)
 
-victus.mainloop()
+b1=Button(lens,text="Submit",command=edtech)
+b1.pack(pady=10)
+
+lens.mainloop()
