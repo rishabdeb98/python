@@ -1,20 +1,26 @@
 from tkinter import *
-from tkinter import messagebox
-lens=Tk()
-lens.geometry("400x400")
 
-v=StringVar()
+root=Tk()
+root.geometry("400x400")
+count=0
 
-def edtech():
-    if v.get()=="":
-        messagebox.showwarning("Caution","Its empty")
-    else:
-        messagebox.showinfo("successfull",v.get())
+def add_one():
+    global count
+    count=count+1
+    l1.config(text=f"Current count {count}")
 
-e1=Entry(lens,text="Enter text",width=30,textvariable=v)
-e1.pack(pady=10)
+def sub_one():
+    global count
+    count=count-1
+    l1.config(text=f"Current count {count}")
 
-b1=Button(lens,text="Submit",command=edtech)
-b1.pack(pady=10)
+l1=Label(root,text="Current count=0")
+l1.pack(pady=20)
 
-lens.mainloop()
+b1=Button(root,text="Click Me to Add by 1",command=add_one)
+b1.pack(pady=20)
+
+s1=Button(root,text="Click Me to Substract by 1",command=sub_one)
+s1.pack()
+
+root.mainloop()
